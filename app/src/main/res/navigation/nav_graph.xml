@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.strawberrykr.ui.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_things"
+            app:destination="@id/things" />
+        <action
+            android:id="@+id/action_mainFragment_to_setting"
+            app:destination="@id/setting" />
+    </fragment>
+    <fragment
+        android:id="@+id/things"
+        android:name="com.strawberrykr.ui.Things"
+        android:label="fragment_things"
+        tools:layout="@layout/fragment_things" >
+        <action
+            android:id="@+id/action_things_to_thingDetal"
+            app:destination="@id/thingDetal" />
+    </fragment>
+    <fragment
+        android:id="@+id/thingDetal"
+        android:name="com.strawberrykr.ui.ThingDetal"
+        android:label="fragment_thing_detal"
+        tools:layout="@layout/fragment_thing_detal" />
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.strawberrykr.ui.Setting"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_setting_to_thingAdd"
+            app:destination="@id/thingAdd" />
+    </fragment>
+    <fragment
+        android:id="@+id/thingAdd"
+        android:name="com.strawberrykr.ui.ThingAdd"
+        android:label="fragment_thing_add"
+        tools:layout="@layout/fragment_thing_add" >
+        <action
+            android:id="@+id/action_thingAdd_to_setting"
+            app:destination="@id/setting" />
+    </fragment>
+</navigation>
